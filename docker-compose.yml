@@ -18,4 +18,4 @@ services:
     volumes:
       - ./jenkins_slave_home:/home/jenkins
     environment:
-      - JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDJs2Njw3Sa8PaC3jX7eYpBNlhMfgmMAfrDylD9l6e9ko9hUpBrIrHhhOeexvzcik5bYekZBoU8+HXyrKl7ueBwsw61pN85LEqyvAj+47QnZzxHjeCJ/JUl6lObDz9ZOK26ZOm3Lk2c3TXO4C0d+GHbjQRM1EoxeuEHCj3eKk97/V1rMdCOHe6BUxbwXuxHtm4laAN4kqjcHeCBuJJZyB7Bhr19oXCERGjbpXWkrAHEYlXhYPT9m+iJ1Ni73U6UtTWO/8aYrhtZ0MBngjThJLWg52egXD69+W3SrwkaVf4cgYQuIbC+GpYBLfBXkWuawva5g7ZfrZO+X6BYpgNF8ZdoKprfwqiQg+5/WsaoMvxVIO7I40Eah247DeIS4Cb7WgWmhpqyg3BYhdDeUPWVBdkj7jEYzk8tl6KlYU70ngyQlxGxa9IdcFRnglJj5YIqxyWRixhTzjsUV/M1JPCqF647LwxtTJ/+Euscy3rQ7YmupQkfLXC+6YoKljmKG3p9VesrBkqJVDebxsOWmsx506w6TtYkdDhcVC7ooZXVbsW+f/UWAoP4O7k1c+fBBL4gUwOMk/tBfsqJuqCUMGQ+jNf9ALS3Fd+c+HLyedBXKtrDCzsMGbOl3tHwou0SNvQlN7u03WuluEapNj2vcd4vlMsumlUOmkI+JpIPvI3kvl2BQQ==
+      - JENKINS_SLAVE_SSH_PUBKEY=
