@@ -1,6 +1,7 @@
 Make volume
 -----
 mkdir jenkins_home
+mkdir jenkins_slave_home
 
 build Master
 -----
@@ -23,10 +24,16 @@ update ssh public in JENKINS_SLAVE_SSH_PUBKEY
 			    environment:
 	      			- JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA.....................
 
+
 Up master and slave
 ----
 
 docker-compose up -d
+
+Create key for agent
+----
+docker-compose exec -u jenkins agent ssh-keygen -t rsa -b 4096 -C "" 
+
 
 Access master
 ----
@@ -35,3 +42,20 @@ Access localhost:8080 browser
 	password
 	----
 		cat jenkins_home/secrets/initialAdminPassword
+
+Create agent in master
+-----
+Create new secret with agent private key
+
+	cat jenkins_slave_home/.ssh/id_rsa
+
+Options
+----
+
+Remote root directory: /home/jenkins
+Launch method: Launch agent via ssh
+	Host: localhost
+	click on advanced
+	port: 2222
+save
+
