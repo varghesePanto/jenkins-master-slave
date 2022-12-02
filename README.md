@@ -1,6 +1,7 @@
 Make volume
 -----
 mkdir jenkins_home
+
 mkdir jenkins_slave_home
 
 build Master
