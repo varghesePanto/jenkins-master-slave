@@ -54,9 +54,14 @@ Options
 ----
 
 Remote root directory: /home/jenkins
+
 Launch method: Launch agent via ssh
+
 	Host: localhost
+
 	click on advanced
+
 	port: 2222
+
 save
 
