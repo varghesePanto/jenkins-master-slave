@@ -13,15 +13,16 @@ docker-compose exec master ssh-keygen -t rsa -b 4096 -C ""
 Update master ssh key to agent
 -----
 cat jenkins_home/.ssh/id_rsa.pub
+
 vi docker-compose.yml 
-	-- update ssh public in JENKINS_SLAVE_SSH_PUBKEY 
-		For example :
-			```
-			....	
-		    environment:
-      			- JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA.....................
-      		...
-      		```
+
+update ssh public in JENKINS_SLAVE_SSH_PUBKEY 
+
+	For example :
+				....	
+			    environment:
+	      			- JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA.....................
+
 Up master and slave
 ----
 
