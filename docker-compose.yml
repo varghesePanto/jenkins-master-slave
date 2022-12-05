@@ -20,7 +20,7 @@ services:
     volumes:
       - ./jenkins_agent_home:/home/jenkins
     environment:
-      - JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC68ziyBp9BcnTri+q45jnfn1ktrMUS5Z7VaoZb7aUfG53askBqx32kQO64ePDv6hznLeyc/q2Dvr7iirpBgpXqTQQ8XKIM/6nZ9gn7XNSKLewh7Ss0JOn/FKg2VDJp67nqJ6XaJmn+i2Fy2tBgS2vl09GVSbw8cMXkBqUXOQH4bITXOb/adctA98sH+936TfDTc4UMB8fnqOrQzHCNrosHkg+sRUf93MTD3CKuAkvPMr78EzIAdYLjsN4QAOeinU6zv3+h2bWpkn/v5wbxA3T9m0huqs1Hy78PESAFYMnsJPuQQi4D3ozsUIBGtJa9B/jwurE1vlyXb7jsA+gTz8Ym6DD9Y8V4yei3LY+Higtj99ulPGDx00AFNGTS59HxD8Zf8EZtONzLR2JbB8a4FmABB78ZtMNFLRK+v/cg3j7/eGMovTTC83TmCR2hIKClr0HPvFV+BpZ0v3sRDK8w5gbOFCUmSpkgiGXsqTVcsJNbeTj8UqYJ+MqfN9uetMRd428=
+      - JENKINS_AGENT_SSH_PUBKEY=
     networks:
       vpcbr:
         ipv4_address: 10.5.0.6

@@ -1,6 +1,7 @@
 Make volume
 -----
 mkdir jenkins_home
+
 mkdir jenkins_slave_home
 
 build Master
@@ -53,10 +54,21 @@ Options
 ----
 
 Remote root directory: /home/jenkins
+
 Launch method: Launch agent via ssh
+<<<<<<< HEAD
 	Host: agentipaddress
 	update agent ssh private key as credential
 	click on advanced
 	port: 22
+=======
+
+	Host: localhost
+
+	click on advanced
+
+	port: 2222
+
+>>>>>>> 59417d4b65573800dac544b86826a0b33933e04b
 save
 
