@@ -5,7 +5,7 @@ mkdir jenkins_slave_home
 
 build Master
 -----
-docker-compose up -d --no-deps --build master
+docker-compose up -d master
 
 Create master ssh key
 -----
@@ -17,18 +17,18 @@ cat jenkins_home/.ssh/id_rsa.pub
 
 vi docker-compose.yml 
 
-update ssh public in JENKINS_SLAVE_SSH_PUBKEY 
+update ssh public in JENKINS_AGENT_SSH_PUBKEY 
 
 	For example :
 				....	
 			    environment:
-	      			- JENKINS_SLAVE_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA.....................
+	      			- JENKINS_AGENT_SSH_PUBKEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAA.....................
 
 
 Up master and slave
 ----
 
-docker-compose up -d
+docker-compose up -d agent
 
 Create key for agent
 ----
@@ -54,8 +54,9 @@ Options
 
 Remote root directory: /home/jenkins
 Launch method: Launch agent via ssh
-	Host: localhost
+	Host: agentipaddress
+	update agent ssh private key as credential
 	click on advanced
-	port: 2222
+	port: 22
 save
 
